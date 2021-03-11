@@ -1,0 +1,5 @@
+cloudbees-folder:latest
+git:latest
+seed:latest
+workflow-aggregator:latest
+workflow-cps:latest
