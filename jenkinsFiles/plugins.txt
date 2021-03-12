@@ -1,5 +1,6 @@
 cloudbees-folder:latest
 git:latest
+permissive-script-security:latest
 seed:latest
 workflow-aggregator:latest
 workflow-cps:latest
