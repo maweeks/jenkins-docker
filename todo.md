@@ -1,6 +1,5 @@
 # To do
 
-- GitHub credentials
 - Global seed job
   - Creates
     - Public seed jobs job
@@ -15,3 +14,4 @@
 ## Later
 
 - Roles plugin
+- GitHub credentials
