@@ -1,9 +1,5 @@
 # To do
 
-- Global seed job
-  - Creates
-    - Public seed jobs job
-    - Private seed jobs job
 - Run initial job on startup
 - Remove extra plugins
 - Add hadolint
