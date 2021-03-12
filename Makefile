@@ -6,3 +6,9 @@ help:                 ## Show this help.
 
 buildAndRun:          ## Build the docker image
 	@./scripts/buildAndRunDocker.sh
+
+startDocker:          ## Start the existing jenkins docker container
+	@docker start jenkins
+
+stopDocker:           ## Stop the existing jenkins docker container
+	@docker stop jenkins
