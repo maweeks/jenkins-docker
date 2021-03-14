@@ -1,7 +1,8 @@
 # To do
 
+- Recreate global seed
 - Remove extra plugins
-- Add hadolint
+- Fix docker
 - Add other plugins
 - Add build and test jobs for interviews
 - AWS credentials
