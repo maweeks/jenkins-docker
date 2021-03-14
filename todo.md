@@ -1,6 +1,5 @@
 # To do
 
-- Run initial job on startup
 - Remove extra plugins
 - Add hadolint
 - Add other plugins

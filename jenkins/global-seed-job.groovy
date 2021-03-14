@@ -1,15 +1,12 @@
 #!groovy
 
-import hudson.plugins.git.*
-import hudson.plugins.git.extensions.*
-import hudson.plugins.git.extensions.impl.*
+import hudson.triggers.SCMTrigger;
 import jenkins.model.Jenkins
-
 import org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition
 import org.jenkinsci.plugins.workflow.job.WorkflowJob
 
 jobParameters = [
-    name:          'Global Seed',
+    name:          'Global seed',
     description:   'Generate the next level of seeds from maweeks/jenkins-seeds.',
 ]
 
@@ -17,6 +14,8 @@ Jenkins jenkins = Jenkins.getInstance()
 
 job = new WorkflowJob(jenkins, jobParameters.name)
 
+job.addTrigger(new SCMTrigger('* * * * *'))
+job.description = jobParameters.description
 job.setDefinition(new CpsFlowDefinition(
         'node {' +
         '\n    checkout([' +
@@ -35,8 +34,6 @@ job.setDefinition(new CpsFlowDefinition(
         '\n}'
     )
 )
-
-job.description = jobParameters.description
 
 jenkins.save()
 jenkins.reload()
