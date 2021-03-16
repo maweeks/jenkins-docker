@@ -1,0 +1,2 @@
+dependency-check-jenkins-plugin:latest
+permissive-script-security:latest

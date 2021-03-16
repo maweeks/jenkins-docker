@@ -3,3 +3,4 @@ git:latest
 seed:latest
 workflow-aggregator:latest
 workflow-cps:latest
+xml-job-to-job-dsl:latest

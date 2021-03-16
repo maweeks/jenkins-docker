@@ -14,3 +14,13 @@ ssh-keygen -t ed25519
 # Add jenkins/ssh-key.pub to GitHub (or other provider)
 make buildAndRun
 ```
+
+## Useful links
+
+- [DSL Plugin Docs](https://jenkinsci.github.io/job-dsl-plugin/#)
+- [DSL Examples 1](https://dev.astrotech.io/jenkins/job-dsl/examples.html)
+- [DSL Examples 2](https://amlanscloud.com/jenkinssample/)
+- [DSL Examples 3](https://support.cloudbees.com/hc/en-us/articles/115003908372-Main-differences-between-Freestyle-Scripted-Pipeline-Job-Declarative-Pipeline-Job)
+- [JavaDoc](https://javadoc.jenkins.io)
+- [Java Examples 1](http://tdongsi.github.io/blog/2017/12/30/groovy-hook-script-and-jenkins-configuration-as-code/)
+- [Java Examples 2](https://github.com/hayderimran7/useful-jenkins-groovy-init-scripts)

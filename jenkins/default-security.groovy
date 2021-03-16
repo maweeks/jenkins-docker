@@ -26,8 +26,6 @@ jenkins.getExtensionList(StaplerProxy.class)
     .get(AdminWhitelistRule.class)
     .masterKillSwitch = false
 
-// jenkins.getAuthorizationStrategy().add(Jenkins.ADMINISTER, env.JENKINS_USER)
-
 jenkins.setAuthorizationStrategy(new FullControlOnceLoggedInAuthorizationStrategy())
 
 jenkins.save()
