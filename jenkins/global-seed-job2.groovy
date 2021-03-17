@@ -1,5 +1,6 @@
 #!groovy
 
+
 import hudson.model.FreeStyleProject;
 import hudson.plugins.git.BranchSpec;
 import hudson.plugins.git.extensions.impl.CleanBeforeCheckout;
@@ -10,11 +11,14 @@ import hudson.plugins.git.GitSCM;
 import hudson.plugins.git.UserRemoteConfig;
 import hudson.scm.SCM;
 import hudson.triggers.SCMTrigger;
+import javaposse.jobdsl.plugin.ExecuteDslScripts;
+import javaposse.jobdsl.plugin.RemovedConfigFilesAction;
+import javaposse.jobdsl.plugin.RemovedJobAction;
+import javaposse.jobdsl.plugin.RemovedViewAction;
 import jenkins.model.Jenkins;
-import hudson.tasks.Shell;
 
 def jobParameters = [
-    name:                'Global_seed_x',
+    name:                'Global seed',
     description:         'Generate seeds from maweeks/jenkins-seeds.',
     repository:          'git@github.com:maweeks/jenkins-seeds.git',
     branch:              'master',
@@ -39,14 +43,13 @@ def scm                       = new GitSCM(userConfig, branchConfig, false, [], 
 
 project.setScm(scm);
 
-project.getBuildersList().add(new Shell("echo 'Shell command'"));
-// TODO: Add build step
-// project.getBuildersList().add(new HelloWorldBuilder("Bobbly"));
-// project.getBuildersList().add(
-//             new PipelineGenerationStep('','','','','','','',false,''
-//             )
-//     )
-// TODO: Add build step
+project.buildersList.add(new ExecuteDslScripts(
+    targets: 'build/*.groovy',
+    ignoreMissingFiles: true,
+    removedConfigFilesAction: RemovedConfigFilesAction.DELETE,
+    removedJobAction: RemovedJobAction.DELETE,
+    removedViewAction: RemovedViewAction.DELETE
+))
 
 project.save()
 jenkins.reload()

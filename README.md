@@ -24,3 +24,4 @@ make buildAndRun
 - [JavaDoc](https://javadoc.jenkins.io)
 - [Java Examples 1](http://tdongsi.github.io/blog/2017/12/30/groovy-hook-script-and-jenkins-configuration-as-code/)
 - [Java Examples 2](https://github.com/hayderimran7/useful-jenkins-groovy-init-scripts)
+- [Java Examples 3](https://www.javatips.net/api/hudson.model.freestyleproject)

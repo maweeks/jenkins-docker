@@ -3,6 +3,9 @@ FROM jenkins/jenkins:lts
 USER root
 RUN apt-get update && apt-get install -y build-essential
 RUN apt install docker.io -y
+# RUN docker --version
+# RUN echo 'FROM jenkins/jenkins:lts' > Dockerfile2
+# RUN docker build -t test -f Dockerfile2
 USER jenkins
 
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false -Dpermissive-script-security.enabled=true
