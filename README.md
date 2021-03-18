@@ -25,3 +25,32 @@ make buildAndRun
 - [Java Examples 1](http://tdongsi.github.io/blog/2017/12/30/groovy-hook-script-and-jenkins-configuration-as-code/)
 - [Java Examples 2](https://github.com/hayderimran7/useful-jenkins-groovy-init-scripts)
 - [Java Examples 3](https://www.javatips.net/api/hudson.model.freestyleproject)
+- [Docker fix](https://tutorials.releaseworksacademy.com/learn/the-simple-way-to-run-docker-in-docker-for-ci)
+
+  - [repo with fix](https://github.com/releaseworks/jenkins-withdocker)
+
+    ```Dockerfile
+    FROM jenkins/jenkins:lts
+    MAINTAINER miiro@getintodevops.com
+    USER root
+
+    # Install the latest Docker CE binaries
+    RUN apt-get update && \
+        apt-get -y install apt-transport-https \
+        ca-certificates \
+        curl \
+        gnupg2 \
+        software-properties-common && \
+        curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg > /tmp/dkey; apt-key add /tmp/dkey && \
+        add-apt-repository \
+        "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
+        $(lsb_release -cs) \
+        stable" && \
+    apt-get update && \
+    apt-get -y install docker-ce
+    ```
+
+- [Other docker link 1](https://www.jenkins.io/doc/book/installing/docker/#installing-docker)
+- [Other docker link 2](https://www.docker.com/blog/docker-can-now-run-within-docker/)
+- [Other docker link 3](http://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/)
+- [Other docker link 4](http://blog.teracy.com/2017/09/11/how-to-use-docker-in-docker-dind-and-docker-outside-of-docker-dood-for-local-ci-testing/)
