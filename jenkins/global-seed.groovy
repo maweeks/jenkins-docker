@@ -22,7 +22,7 @@ def jobParameters = [
     repository:          'git@github.com:maweeks/jenkins-seeds.git',
     branch:              'master',
     credentialId:        'maweeksGitHub',
-    jenkinsfile:         'build/*.groovy',
+    jenkinsfile:         'build/*',
     scmTriggerFrequency: '* * * * *'
 ]
 
