@@ -1,6 +1,5 @@
 #!groovy
 
-
 import hudson.model.FreeStyleProject;
 import hudson.plugins.git.BranchSpec;
 import hudson.plugins.git.extensions.impl.CleanBeforeCheckout;
