@@ -1,6 +1,7 @@
 cloudbees-folder:latest
 git:latest
 seed:latest
+view-job-filters:latest
 workflow-aggregator:latest
 workflow-cps:latest
 xml-job-to-job-dsl:latest
