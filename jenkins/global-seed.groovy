@@ -17,7 +17,8 @@ import javaposse.jobdsl.plugin.RemovedViewAction;
 import jenkins.model.Jenkins;
 
 def jobParameters = [
-    name:                'Global seed',
+    name:                'global-seed',
+    displayName:         'Global seed',
     description:         'Generate seeds from maweeks/jenkins-seeds.',
     repository:          'git@github.com:maweeks/jenkins-seeds.git',
     branch:              'master',
@@ -29,6 +30,7 @@ def jobParameters = [
 Jenkins jenkins = Jenkins.getInstance()
 def project = new FreeStyleProject(jenkins, jobParameters.name)
 
+project.setDisplayName(jobParameters.displayName)
 project.setDescription(jobParameters.description)
 project.addTrigger(new SCMTrigger(jobParameters.scmTriggerFrequency))
 
