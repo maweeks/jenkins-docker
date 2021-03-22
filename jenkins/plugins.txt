@@ -1,3 +1,4 @@
+aws-credentials:latest
 cloudbees-folder:latest
 git:latest
 seed:latest

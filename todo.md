@@ -1,9 +1,9 @@
 # To do
 
-- Add build and test jobs for interviews
-- AWS credentials
+- Fix NVM for jenkins user
 - AWS Deploy jobs for interviews
 
 ## Later
 
 - Roles plugin
+- Move credentials to AWS Secrets?

@@ -1,3 +1,4 @@
+.env
 variables.mk
 jenkins/ssh-key
 jenkins/ssh-key.pub
