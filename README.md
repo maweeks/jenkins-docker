@@ -55,3 +55,4 @@ make buildAndRun
 - [Other docker link 3](http://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/)
 - [Other docker link 4](http://blog.teracy.com/2017/09/11/how-to-use-docker-in-docker-dind-and-docker-outside-of-docker-dood-for-local-ci-testing/)
 - [Jenkins DIND](https://github.com/ayudadigital/jenkins-dind)
+- [Supervisor](https://blog.jayway.com/2015/03/14/docker-in-docker-with-jenkins-and-supervisord/)
