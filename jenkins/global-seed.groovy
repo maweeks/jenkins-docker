@@ -17,7 +17,7 @@ import javaposse.jobdsl.plugin.RemovedViewAction;
 import jenkins.model.Jenkins;
 
 def jobParameters = [
-    name:                'global-seed',
+    name:                'GlobalSeed',
     displayName:         'Global seed',
     description:         'Generate seeds from maweeks/jenkins-seeds.',
     repository:          'git@github.com:maweeks/jenkins-seeds.git',

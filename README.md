@@ -15,6 +15,22 @@ ssh-keygen -t ed25519
 make buildAndRun
 ```
 
+## Usage
+
+Using nvm in a build:
+
+```groovy
+stage('NVM') {
+    steps {
+        sh '''
+        #!/usr/local/bin/bash
+        source ~/.bashrc
+        nvm --version
+        '''
+    }
+}
+```
+
 ## Useful links
 
 - [DSL Plugin Docs](https://jenkinsci.github.io/job-dsl-plugin/#)
