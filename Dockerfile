@@ -18,9 +18,11 @@ RUN mkdir -p /var/log/supervisor && \
     gnupg2 \
     libssl-dev \
     lxc \
+    ruby \
     shellcheck \
     software-properties-common \
     supervisor && \
+    gem install cfn-nag && \
     curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg > /tmp/dkey; apt-key add /tmp/dkey && \
     add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
